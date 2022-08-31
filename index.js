@@ -1,27 +1,20 @@
 let randomNumber1 = Math.floor(Math.random()*6) + 1;
 
-let dice_one = document.getElementById("img1").src;
+let randomNumber2 = Math.floor(Math.random()*6) + 1;
 
-if (randomNumber1 == 1){
-    dice_one = "images/dice1.png";
-}
-else if (randomNumber1 == 2){
-    dice_one = "images/dice2.png";
-}
+let randomDiceImage = "dice" + randomNumber1 + ".png";
 
-else if (randomNumber1 == 3){
-    dice_one = "images/dice3.png";
-}
+let randomDiceImageTwo = "dice" + randomNumber2 + ".png";
 
-else if (randomNumber1 == 4){
-    dice_one = "images/dice4.png";
-}
+let randomImageSource = "images/" + randomDiceImage;
 
-else if (randomNumber1 == 5){
-    dice_one = "images/dice5.png";
-}
+let randomImageSourceTwo = "images/" + randomDiceImageTwo;
 
-else if (randomNumber1 == 6){
-    dice_one = "images/dice6.png";
-}
+let image1 = document.querySelectorAll("img")[0];
+
+let image2 = document.querySelectorAll("img")[1];
+
+image1.setAttribute("src", randomImageSource);
+
+image2.setAttribute("src", randomImageSourceTwo);
 
